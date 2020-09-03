@@ -18,10 +18,10 @@ def NSNBSformat(x, n):
 
 
 workDir = os.getcwd()    
-con = sqlite3.connect(r'C:\Users\ng.shabanov\Desktop\HuaTEST.db')
+con = sqlite3.connect(r'link to DB')
 cursorObject = con.cursor()
 n = 0
-cursorObject.execute('SELECT * FROM AntHuaNSN')
+cursorObject.execute('SELECT * FROM table in tb')
 for i in range(8):
     rowExcel = cursorObject.fetchone()
     if rowExcel[1].startswith('MRB') and huaBSformat(rowExcel[0]) != NSNBSformat(rowExcel[1], 5):
